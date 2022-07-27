@@ -20,14 +20,20 @@ header {
     background-color: var(--header-background);
 }
 
+h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 main {
     padding: 20px;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 2fr 1fr;
 }
 
 .cups {
     display: flex;
+    justify-content: space-evenly;
 }
 
 #cup-one, #cup-two, #cup-three {
