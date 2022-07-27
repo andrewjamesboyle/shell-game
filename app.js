@@ -66,7 +66,7 @@ cupTwoButton.addEventListener('click', () => {
 });
 
 cupThreeButton.addEventListener('click', () => {
-  console.log('user click cup three');
+  console.log('user clicked cup three');
   const hidingSpot = Math.floor(Math.random() * 3);
   const answer = ballLocation[hidingSpot];
   theGameFunction(answer, 'cup three');

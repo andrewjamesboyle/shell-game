@@ -59,3 +59,7 @@ footer {
     background-color: var(--footer-background);
 }
 
+.ball::after {
+    content: '🏀';
+    font-size: 8rems;
+}
