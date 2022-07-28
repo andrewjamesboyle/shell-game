@@ -12,7 +12,7 @@ const winsEl = document.getElementById('wins');
 const lossesEl = document.getElementById('losses');
 const totalEl = document.getElementById('total');
 
-const ballLocation = ['cup one', 'cup two', 'cup three'];
+const ballLocations = [cupOneImg, cupTwoImg, cupThreeImg];
 
 let wins = 0;
 let losses = 0;
@@ -47,30 +47,33 @@ function theGameFunction(correctGuess, userGuess) {
 
 cupOneButton.addEventListener('click', () => {
   console.log('user clicked cup one');
-  const hidingSpot = Math.floor(Math.random() * 3);
-  const answer = ballLocation[hidingSpot];
-  theGameFunction(answer, 'cup one');
+  const hidingSpotIndex = Math.floor(Math.random() * 3);
+  const answer = ballLocations[hidingSpotIndex];
+  theGameFunction(answer, cupOneImg);
   total++;
+  answer.src = '/assets/cup-winner.png';
   displayScore();
   disableButtons();
 });
 
 cupTwoButton.addEventListener('click', () => {
   console.log('user clicked cup two');
-  const hidingSpot = Math.floor(Math.random() * 3);
-  const answer = ballLocation[hidingSpot];
-  theGameFunction(answer, 'cup two');
+  const hidingSpotIndex = Math.floor(Math.random() * 3);
+  const answer = ballLocations[hidingSpotIndex];
+  theGameFunction(answer, cupTwoImg);
   total++;
+  answer.src = '/assets/cup-winner.png';
   displayScore();
   disableButtons();
 });
 
 cupThreeButton.addEventListener('click', () => {
   console.log('user clicked cup three');
-  const hidingSpot = Math.floor(Math.random() * 3);
-  const answer = ballLocation[hidingSpot];
-  theGameFunction(answer, 'cup three');
+  const hidingSpotIndex = Math.floor(Math.random() * 3);
+  const answer = ballLocations[hidingSpotIndex];
+  theGameFunction(answer, cupThreeImg);
   total++;
+  answer.src = '/assets/cup-winner.png';
   displayScore();
   disableButtons();
 });
